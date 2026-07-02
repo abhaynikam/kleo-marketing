@@ -49,7 +49,7 @@ const stats = [
   },
   {
     id: 'price',
-    label: 'to use — free today, free forever',
+    label: 'to use — free, no credit card',
     value: '₹0',
   },
   {

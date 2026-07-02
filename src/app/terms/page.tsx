@@ -79,21 +79,25 @@ export default async function TermsPage({
         believe are being misused.
       </p>
 
-      <h2>4. Connected accounts and third-party services</h2>
+      <h2>4. Your data and third-party services</h2>
       <p>
-        The Service lets you connect third-party sources — including banks, card
-        issuers, account aggregators, brokers, and mutual-fund platforms — and to
-        import statements. These third parties are outside our control and are
-        governed by their own terms and privacy policies. You authorise us to
-        access and process data from the sources you connect solely to provide the
-        Service to you.
+        You bring your financial data into Kleo by uploading statements or reports
+        (such as PDF or CSV files) from your banks, cards, and brokers, or by
+        entering it manually. Kleo does not establish live connections to your
+        financial institutions and does not move money or access your accounts on
+        your behalf — it works only from the documents and data you provide. The
+        Service also offers optional AI features that use an AI provider you
+        choose. Your financial institutions and any AI provider are outside our
+        control and are governed by their own terms and privacy policies. You
+        authorise us to process the data you provide solely to provide the Service
+        to you.
       </p>
       <p>
-        We are not responsible for the availability, accuracy, timeliness, or
-        completeness of data supplied by third parties, or for any act or omission
-        of any third party. Balances, holdings, and transactions shown in Kleo may
-        be delayed or incorrect; you should always verify important figures
-        directly with your financial institution.
+        We are not responsible for the accuracy, timeliness, or completeness of the
+        statements or data you provide, or for any act or omission of any third
+        party. Figures shown in Kleo depend on the data you upload and may be out
+        of date or incorrect; you should always verify important figures directly
+        with your financial institution.
       </p>
 
       <h2>5. AI features and your API keys</h2>
@@ -127,8 +131,8 @@ export default async function TermsPage({
           or in violation of any applicable law or regulation;
         </li>
         <li>
-          Access data that is not yours, or connect accounts you are not
-          authorised to access;
+          Upload or access data that is not yours or that you are not authorised
+          to use;
         </li>
         <li>
           Reverse engineer, decompile, scrape, copy, or create derivative works
@@ -201,9 +205,9 @@ export default async function TermsPage({
         You agree to indemnify and hold harmless Navio Labs and its founders,
         directors, employees, and agents from any claims, liabilities, damages,
         losses, and expenses (including reasonable legal fees) arising out of or
-        related to your use of the Service, your data, your connected accounts,
-        your use of AI providers, or your breach of these Terms or of any
-        applicable law.
+        related to your use of the Service, the data you upload or provide, your
+        use of AI providers, or your breach of these Terms or of any applicable
+        law.
       </p>
 
       <h2>12. Termination</h2>

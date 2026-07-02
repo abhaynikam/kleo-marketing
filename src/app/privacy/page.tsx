@@ -49,11 +49,13 @@ export default async function PrivacyPage({
           and any profile information you choose to add.
         </li>
         <li>
-          <strong>Financial information you connect or import</strong> —
-          transactions, balances, and holdings pulled from bank and card accounts,
-          account aggregators, and brokers you link, as well as data from PDF or
-          CSV statements you upload. This can include investments (mutual funds,
-          ETFs, stocks) and insurance policies and their renewal dates.
+          <strong>Financial information you upload or enter</strong> —
+          transactions, balances, and holdings that you provide by uploading
+          statements or reports (PDF or CSV) from your banks, cards, and brokers,
+          or by entering them manually. This can include investments (mutual
+          funds, ETFs, stocks) and insurance policies and their renewal dates.
+          Kleo does not establish live connections to your financial institutions;
+          it works from the documents and data you give it.
         </li>
         <li>
           <strong>AI provider API keys</strong> — if you enable AI features, the
@@ -122,9 +124,9 @@ export default async function PrivacyPage({
           process data on our behalf under confidentiality obligations.
         </li>
         <li>
-          <strong>Connections you initiate.</strong> With banks, account
-          aggregators, brokers, and AI providers that you choose to connect, in
-          order to provide the features you requested.
+          <strong>AI provider you choose.</strong> If you enable AI features,
+          with the AI provider (such as Anthropic or OpenAI) whose API key you
+          add, in order to categorise the data you asked it to process.
         </li>
         <li>
           <strong>Legal and safety.</strong> When required by law, regulation,
@@ -161,7 +163,7 @@ export default async function PrivacyPage({
       <ul>
         <li>Access and review the data in your account;</li>
         <li>Correct inaccurate information, including transaction categories;</li>
-        <li>Disconnect a linked account or remove your AI provider key at any time;</li>
+        <li>Delete data you have uploaded or remove your AI provider key at any time;</li>
         <li>Delete your account and associated data; and</li>
         <li>
           Contact us to exercise any privacy rights available to you under

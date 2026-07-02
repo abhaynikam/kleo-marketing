@@ -57,14 +57,14 @@ const reviews: Array<Review> = [
     rating: 5,
   },
   {
-    title: 'Net worth in real time is addictive.',
-    body: 'Watching one number reflect every account made me care about it. Small habit, big change in how I think about money.',
+    title: 'One number for everything is addictive.',
+    body: 'Watching a single number reflect every account made me care about it. Small habit, big change in how I think about money.',
     author: 'Karthik V.',
     rating: 5,
   },
   {
-    title: 'It just stays current.',
-    body: 'The best part is that I don’t maintain it. I connected my accounts once and Kleo keeps itself up to date. Set and forget.',
+    title: 'Updating it takes seconds.',
+    body: 'When a new statement comes in, I drop it into Kleo and everything updates. That’s the whole routine — no spreadsheets, no tagging.',
     author: 'Isha B.',
     rating: 5,
   },
@@ -280,7 +280,7 @@ export function Reviews() {
             People finally understand their money.
           </h2>
           <p className="mt-2 text-lg text-gray-600 sm:text-center">
-            Here’s what early Kleo users say after connecting their accounts.
+            Here’s what early Kleo users say after their first upload.
           </p>
         </div>
         <ReviewGrid />

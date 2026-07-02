@@ -10,7 +10,7 @@ const faqs = [
     {
       question: 'How does Kleo get my transactions?',
       answer:
-        'Kleo securely connects to your bank and card accounts to pull in transactions and balances. You can also import PDF or CSV statements to bring in your history.',
+        'You bring your data into Kleo by uploading the statements or reports your bank, card, and investment providers give you — PDF or CSV. Kleo reads them and pulls in your transactions and balances. You can also add entries manually anytime.',
     },
     {
       question: 'Do I have to categorize transactions myself?',
@@ -27,7 +27,7 @@ const faqs = [
     {
       question: 'How is my net worth calculated?',
       answer:
-        'Kleo adds up your assets — account balances and investment values — and subtracts your liabilities like credit-card outstanding, then keeps that number updated in real time as things change.',
+        'Kleo adds up your assets — account balances and investment values — and subtracts your liabilities like credit-card outstanding, then updates that number whenever you add a new statement or entry.',
     },
     {
       question: 'Does Kleo give investment advice?',
@@ -49,7 +49,7 @@ const faqs = [
     {
       question: 'Do I have to enter data manually?',
       answer:
-        'Not for the day to day — Kleo pulls transactions in and keeps itself current. Manual entry is available when you want it, but the point is that you don’t have to.',
+        'Not transaction by transaction — you upload a statement and Kleo reads every transaction from it at once, so you’re not typing each one. Manual entry is there when you want it.',
     },
   ],
 ]

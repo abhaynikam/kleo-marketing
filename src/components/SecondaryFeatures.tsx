@@ -253,7 +253,7 @@ const features = [
   {
     name: 'Private by design',
     description:
-      'Read-only connections and bank-grade encryption. Your data is never sold — what’s yours stays yours.',
+      'You decide what goes in, and it’s encrypted in transit. Your data is never sold — what’s yours stays yours.',
     icon: LockIcon,
     iconClassName: 'from-[#333850] to-[#0d132b] shadow-gray-900/25',
   },
@@ -276,9 +276,9 @@ export function SecondaryFeatures() {
               Not a budgeting nag. A money brain.
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Kleo doesn’t lecture you about lattes — it quietly keeps a
-              perfect, real-time picture of your finances. Here’s what switches
-              on the moment you connect an account.
+              Kleo doesn’t lecture you about lattes — it quietly keeps a clear
+              picture of your finances. Here’s what switches on the moment you
+              import your first statement.
             </p>
           </div>
         </AnimateIn>

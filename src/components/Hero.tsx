@@ -91,7 +91,7 @@ function Aurora() {
 
 const highlights = [
   'Auto-categorized spending',
-  'Real-time net worth',
+  'Net worth in one number',
   'Investments in one place',
   'Free — no card required',
 ]
@@ -205,7 +205,7 @@ export function Hero() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-500 opacity-60" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-500" />
                 </span>
-                Free forever — no paywall, no credit card
+                Free — no paywall, no credit card
               </span>
             </AnimateIn>
             <AnimateIn delay={0.1}>
@@ -218,9 +218,9 @@ export function Hero() {
             </AnimateIn>
             <AnimateIn delay={0.2}>
               <p className="mt-6 text-lg text-gray-600">
-                Kleo connects to your banks, cards, and investments — then does
-                the tracking for you. Spending sorted itself. Net worth,
-                live. Your whole portfolio, one glance. You just look.
+                Upload your statements and Kleo does the tracking for you.
+                Spending sorts itself. Your net worth in a single number. Your
+                whole portfolio, one glance. You just look.
               </p>
             </AnimateIn>
             <AnimateIn delay={0.3}>

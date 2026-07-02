@@ -57,16 +57,16 @@ const steps = [
   {
     number: '01',
     icon: LinkIcon,
-    title: 'Connect in a minute',
+    title: 'Add your accounts in a minute',
     description:
-      'Link your banks, cards, and investment accounts securely — or just upload a statement. Access is read-only, always.',
+      'Upload a statement or report — PDF or CSV — for each account, or add a few entries by hand. Your data stays yours, always.',
   },
   {
     number: '02',
     icon: SparklesIcon,
     title: 'Kleo does the busywork',
     description:
-      'Every transaction lands pre-categorized. Balances, holdings, and premiums keep themselves in sync. No tagging, no spreadsheets.',
+      'Every transaction lands pre-categorized. Balances, holdings, and premiums line up automatically. No tagging, no spreadsheets.',
   },
   {
     number: '03',
@@ -94,8 +94,9 @@ export function HowItWorks() {
               From “where did it all go?” to “got it” in three steps.
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              No setup marathons. No maintenance. Connect once and Kleo keeps
-              your money story current on its own.
+              No setup marathons. No spreadsheets. Upload a statement and Kleo
+              turns it into your money story — refreshed whenever you add the
+              next one.
             </p>
           </div>
         </AnimateIn>

@@ -14,14 +14,14 @@ const features = [
   {
     name: 'Every transaction, sorted for you',
     description:
-      'Kleo pulls in your credit-card and bank transactions and categorizes each one automatically — food, travel, subscriptions, utilities. No manual tagging, no falling behind.',
+      'Upload a statement and Kleo reads every credit-card and bank transaction, then categorizes each one automatically — food, travel, subscriptions, utilities. No manual tagging, no falling behind.',
     icon: TagIcon,
     screen: screenshots.transactions,
   },
   {
-    name: 'Net worth, updated in real time',
+    name: 'Net worth in a single number',
     description:
-      'Bank balances, credit-card outstanding, and investments add up to a single net-worth number that stays current. See exactly where you stand at a glance.',
+      'Bank balances, credit-card outstanding, and investments add up to one net-worth number that updates as you add new statements. See exactly where you stand at a glance.',
     icon: ChartIcon,
     screen: screenshots.home,
   },
@@ -282,9 +282,9 @@ export function PrimaryFeatures() {
           </h2>
           <p className="mt-3 text-lg text-gray-400">
             You have money in more places than any single app can see — until
-            now. Kleo does the tedious work, so the numbers that matter are
-            always current, readable, and in one place. No spreadsheets, no
-            manual entry.
+            now. Upload your statements and Kleo does the tedious work, so the
+            numbers that matter are readable and in one place. No spreadsheets,
+            no tagging each transaction by hand.
           </p>
         </div>
       </Container>

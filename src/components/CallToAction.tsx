@@ -30,7 +30,7 @@ export function CallToAction() {
             </h2>
             <p className="mt-4 text-lg text-gray-300">
               One minute from now, your spending, net worth, and investments
-              can be in a single view. Free forever — no credit card, no
+              can be in a single view. Free — no credit card, no
               catches.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-8 sm:flex-row">
@@ -45,8 +45,8 @@ export function CallToAction() {
               </div>
             </div>
             <p className="mt-8 text-sm text-gray-400">
-              Read-only bank access · Your data stays yours · Setup in ~60
-              seconds
+              You control what you upload · Your data stays yours · Setup in
+              ~60 seconds
             </p>
           </div>
         </AnimateIn>

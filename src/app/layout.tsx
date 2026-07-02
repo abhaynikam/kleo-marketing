@@ -1,5 +1,6 @@
 import { type Metadata } from 'next'
 import { Poppins } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 import clsx from 'clsx'
 
 import '@/styles/tailwind.css'
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     default: 'Kleo — Every account. Every rupee. One clear picture.',
   },
   description:
-    'Kleo connects to your banks, cards, and investments — then does the tracking for you. Auto-categorized spending, real-time net worth, and your whole portfolio in one glance. Free forever.',
+    'Upload your statements and Kleo does the tracking for you. Auto-categorized spending, your net worth in one number, and your whole portfolio in one glance. Free to use.',
 }
 
 export default function RootLayout({
@@ -30,7 +31,10 @@ export default function RootLayout({
       lang="en"
       className={clsx('bg-gray-50 antialiased', poppins.variable)}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
