@@ -24,7 +24,8 @@ export default async function PrivacyPage({
       embed={embed === '1' || embed === 'true'}
       intro={
         <p>
-          This Privacy Policy explains how <strong>Navio Labs</strong> (
+          This Privacy Policy explains how{' '}
+          <strong>Navio Labs Pvt. Ltd.</strong> (
           <strong>&ldquo;we&rdquo;</strong>, <strong>&ldquo;us&rdquo;</strong>,
           or <strong>&ldquo;our&rdquo;</strong>), the operator of the{' '}
           <strong>Kleo</strong> app and website (the{' '}

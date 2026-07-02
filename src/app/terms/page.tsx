@@ -26,7 +26,8 @@ export default async function TermsPage({
         <p>
           These Terms of Service (<strong>&ldquo;Terms&rdquo;</strong>) are a
           binding agreement between you and{' '}
-          <strong>Navio Labs</strong> (<strong>&ldquo;Navio Labs&rdquo;</strong>,{' '}
+          <strong>Navio Labs Pvt. Ltd.</strong> (
+          <strong>&ldquo;Navio Labs&rdquo;</strong>,{' '}
           <strong>&ldquo;we&rdquo;</strong>, <strong>&ldquo;us&rdquo;</strong>,
           or <strong>&ldquo;our&rdquo;</strong>), the operator of the{' '}
           <strong>Kleo</strong> mobile application and website (together, the{' '}

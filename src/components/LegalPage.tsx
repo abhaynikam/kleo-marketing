@@ -89,7 +89,10 @@ export function LegalPage({
       {!embed && (
         <footer className="border-t border-gray-200">
           <Container className="flex flex-col items-center justify-between gap-4 py-8 text-sm text-gray-500 sm:flex-row">
-            <p>&copy; {new Date().getFullYear()} Navio Labs. All rights reserved.</p>
+            <p>
+              &copy; {new Date().getFullYear()} Navio Labs Pvt. Ltd. All rights
+              reserved.
+            </p>
             <nav className="flex gap-6">
               <Link href="/" className="hover:text-gray-900">
                 Home
