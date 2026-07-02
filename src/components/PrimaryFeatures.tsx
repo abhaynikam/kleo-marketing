@@ -274,13 +274,17 @@ export function PrimaryFeatures() {
     >
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
-          <h2 className="text-3xl font-semibold tracking-tight text-white">
+          <p className="text-sm font-semibold tracking-wide text-[#ab98f9] uppercase">
+            The core of Kleo
+          </p>
+          <h2 className="mt-2 text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">
             One app for your entire financial life.
           </h2>
-          <p className="mt-2 text-lg text-gray-400">
-            Kleo connects your accounts and does the tedious work for you — so
-            the numbers that matter are always up to date, easy to read, and in
-            one place. No spreadsheets, no manual entry.
+          <p className="mt-3 text-lg text-gray-400">
+            You have money in more places than any single app can see — until
+            now. Kleo does the tedious work, so the numbers that matter are
+            always current, readable, and in one place. No spreadsheets, no
+            manual entry.
           </p>
         </div>
       </Container>

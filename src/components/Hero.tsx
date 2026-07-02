@@ -1,5 +1,6 @@
 import { useId } from 'react'
 
+import { AnimateIn } from '@/components/AnimateIn'
 import { AppStoreLink } from '@/components/AppStoreLink'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
@@ -75,6 +76,19 @@ function BackgroundIllustration(props: React.ComponentPropsWithoutRef<'div'>) {
   )
 }
 
+function Aurora() {
+  return (
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[640px] overflow-hidden mask-[linear-gradient(to_bottom,transparent,white_18%,white_55%,transparent)]"
+    >
+      <div className="absolute -top-40 left-[8%] h-[420px] w-[420px] rounded-full bg-[#6C4EF5] opacity-[0.10] blur-[120px]" />
+      <div className="absolute -top-24 right-[12%] h-[380px] w-[380px] rounded-full bg-[#4D8BFF] opacity-[0.10] blur-[120px]" />
+      <div className="absolute top-40 left-[38%] h-[300px] w-[300px] rounded-full bg-[#21C16B] opacity-[0.07] blur-[110px]" />
+    </div>
+  )
+}
+
 const highlights = [
   'Auto-categorized spending',
   'Real-time net worth',
@@ -97,52 +111,186 @@ function CheckIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+function StarIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+    </svg>
+  )
+}
+
+const avatars = [
+  { initial: 'P', className: 'bg-gradient-to-br from-[#6C4EF5] to-[#4a2ad9]' },
+  { initial: 'R', className: 'bg-gradient-to-br from-[#4D8BFF] to-[#2a5fd0]' },
+  { initial: 'A', className: 'bg-gradient-to-br from-[#21C16B] to-[#128a49]' },
+  { initial: 'M', className: 'bg-gradient-to-br from-[#f5934e] to-[#d96b2a]' },
+  { initial: 'V', className: 'bg-gradient-to-br from-[#8b72f7] to-[#5b3bf6]' },
+]
+
+function SocialProof() {
+  return (
+    <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
+      <div className="flex -space-x-2">
+        {avatars.map((avatar) => (
+          <span
+            key={avatar.initial}
+            className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-semibold text-white ring-2 ring-white ${avatar.className}`}
+          >
+            {avatar.initial}
+          </span>
+        ))}
+      </div>
+      <div>
+        <div className="flex items-center gap-1 text-amber-400">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <StarIcon key={i} className="h-4 w-4" />
+          ))}
+          <span className="ml-1 text-sm font-semibold text-gray-900">4.9</span>
+        </div>
+        <p className="text-sm text-gray-500">
+          Loved by early users who finally know where they stand
+        </p>
+      </div>
+    </div>
+  )
+}
+
+function FloatingCard({
+  className,
+  children,
+}: {
+  className?: string
+  children: React.ReactNode
+}) {
+  return (
+    <div
+      className={`pointer-events-none absolute z-10 rounded-2xl border border-white/60 bg-white/85 p-4 shadow-xl shadow-gray-900/10 backdrop-blur-md ${className}`}
+    >
+      {children}
+    </div>
+  )
+}
+
+function UpArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
+      <path
+        d="M3 10.5 7 6l2.5 2.5L13 4.5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M9.5 4.5H13V8"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
 export function Hero() {
   return (
-    <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
+    <div className="relative overflow-hidden py-16 sm:py-24 lg:pb-32 xl:pb-36">
+      <Aurora />
       <Container>
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
-            <span className="inline-flex items-center gap-2 rounded-full bg-cyan-50 px-3 py-1 text-sm font-medium text-cyan-700 ring-1 ring-cyan-500/20 ring-inset">
-              <span className="h-1.5 w-1.5 rounded-full bg-cyan-500" />
-              Free personal finance, done for you
-            </span>
-            <h1 className="mt-6 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-              Your complete money picture.
-            </h1>
-            <p className="mt-6 text-lg text-gray-600">
-              Kleo securely connects to your bank accounts and gives you one
-              clear view of your finances — spending, net worth, and
-              investments. Everything is pulled in and categorized
-              automatically, so you can stop tracking and start understanding.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
-              <AppStoreLink />
-              <Button href="/#features" variant="outline">
-                <span>See how it works</span>
-              </Button>
-            </div>
-            <ul
-              role="list"
-              className="mt-8 grid grid-cols-1 gap-x-8 gap-y-3 text-sm text-gray-700 sm:grid-cols-2"
-            >
-              {highlights.map((item) => (
-                <li key={item} className="flex items-center gap-2.5">
-                  <CheckIcon className="h-5 w-5 flex-none" />
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <AnimateIn>
+              <span className="inline-flex items-center gap-2 rounded-full bg-cyan-50 px-3 py-1 text-sm font-medium text-cyan-700 ring-1 ring-cyan-500/20 ring-inset">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-500 opacity-60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-500" />
+                </span>
+                Free forever — no paywall, no credit card
+              </span>
+            </AnimateIn>
+            <AnimateIn delay={0.1}>
+              <h1 className="mt-6 text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-6xl">
+                Every account. Every rupee.{' '}
+                <span className="bg-gradient-to-r from-[#6C4EF5] via-[#5b3bf6] to-[#4D8BFF] bg-clip-text text-transparent">
+                  One clear picture.
+                </span>
+              </h1>
+            </AnimateIn>
+            <AnimateIn delay={0.2}>
+              <p className="mt-6 text-lg text-gray-600">
+                Kleo connects to your banks, cards, and investments — then does
+                the tracking for you. Spending sorted itself. Net worth,
+                live. Your whole portfolio, one glance. You just look.
+              </p>
+            </AnimateIn>
+            <AnimateIn delay={0.3}>
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+                <AppStoreLink />
+                <Button href="/#features" variant="outline">
+                  <span>See how it works</span>
+                </Button>
+              </div>
+              <SocialProof />
+            </AnimateIn>
+            <AnimateIn delay={0.4}>
+              <ul
+                role="list"
+                className="mt-8 grid grid-cols-1 gap-x-8 gap-y-3 text-sm text-gray-700 sm:grid-cols-2"
+              >
+                {highlights.map((item) => (
+                  <li key={item} className="flex items-center gap-2.5">
+                    <CheckIcon className="h-5 w-5 flex-none" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </AnimateIn>
           </div>
           <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
             <BackgroundIllustration className="absolute top-4 left-1/2 h-[1026px] w-[1026px] -translate-x-1/3 mask-[linear-gradient(to_bottom,white_20%,transparent_75%)] stroke-gray-300/70 sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
             <div className="-mx-4 h-[448px] mask-[linear-gradient(to_bottom,white_60%,transparent)] px-9 sm:mx-0 lg:absolute lg:-inset-x-10 lg:-top-10 lg:-bottom-20 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32">
-              <PhoneScreenshot
-                src={screenshots.onboarding}
-                alt="The Kleo app showing your net worth, spending and investments at a glance"
-                className="mx-auto max-w-[366px]"
-                priority
-              />
+              <div className="relative mx-auto max-w-[366px]">
+                <FloatingCard className="top-16 -left-10 hidden animate-float sm:block lg:-left-24">
+                  <p className="text-xs font-medium text-gray-500">
+                    Salary credited
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-[#21C16B]">
+                    +₹1,20,000
+                  </p>
+                </FloatingCard>
+                <FloatingCard className="top-40 -right-8 hidden animate-float-delayed sm:block lg:-right-20">
+                  <div className="flex items-center gap-2">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#6C4EF5]/10 text-[#6C4EF5]">
+                      <UpArrowIcon className="h-4 w-4" />
+                    </span>
+                    <div>
+                      <p className="text-xs font-medium text-gray-500">
+                        Net worth
+                      </p>
+                      <p className="text-sm font-semibold text-gray-900">
+                        ₹18.2L{' '}
+                        <span className="text-xs font-medium text-[#21C16B]">
+                          ↑ 14.6%
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </FloatingCard>
+                <FloatingCard className="top-72 -left-14 hidden animate-float-slow sm:block lg:-left-28">
+                  <p className="text-xs font-medium text-gray-500">
+                    3 forgotten subscriptions found
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-gray-900">
+                    ₹1,299<span className="text-xs text-gray-500">/mo</span>
+                  </p>
+                </FloatingCard>
+                <PhoneScreenshot
+                  src={screenshots.onboarding}
+                  alt="The Kleo app showing your net worth, spending and investments at a glance"
+                  className="mx-auto max-w-[366px]"
+                  priority
+                />
+              </div>
             </div>
           </div>
           <div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">
@@ -151,7 +299,7 @@ export function Hero() {
             </p>
             <ul
               role="list"
-              className="mx-auto mt-8 flex max-w-xl flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-medium text-gray-500 lg:mx-0 lg:justify-start"
+              className="mx-auto mt-8 flex max-w-xl flex-wrap justify-center gap-x-3 gap-y-3 text-sm font-medium text-gray-500 lg:mx-0 lg:justify-start"
             >
               {[
                 'Bank accounts',
@@ -163,7 +311,7 @@ export function Hero() {
               ].map((name) => (
                 <li
                   key={name}
-                  className="rounded-full bg-gray-100 px-4 py-1.5 text-gray-700"
+                  className="rounded-full bg-white px-4 py-1.5 text-gray-700 ring-1 ring-gray-200 transition hover:-translate-y-0.5 hover:ring-[#6C4EF5]/40"
                 >
                   {name}
                 </li>

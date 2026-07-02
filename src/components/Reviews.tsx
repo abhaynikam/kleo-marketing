@@ -266,15 +266,23 @@ export function Reviews() {
       className="pt-20 pb-16 sm:pt-32 sm:pb-24"
     >
       <Container>
-        <h2
-          id="reviews-title"
-          className="text-3xl font-semibold tracking-tight text-gray-900 sm:text-center"
-        >
-          People finally understand their money.
-        </h2>
-        <p className="mt-2 text-lg text-gray-600 sm:text-center">
-          Here’s what early Kleo users say after connecting their accounts.
-        </p>
+        <div className="sm:flex sm:flex-col sm:items-center">
+          <div className="flex items-center gap-2 rounded-full bg-white px-4 py-1.5 shadow-sm ring-1 ring-gray-200">
+            <StarRating rating={5} />
+            <span className="text-sm font-semibold text-gray-900">
+              4.9 out of 5
+            </span>
+          </div>
+          <h2
+            id="reviews-title"
+            className="mt-6 text-3xl font-semibold tracking-tight text-balance text-gray-900 sm:text-center sm:text-4xl"
+          >
+            People finally understand their money.
+          </h2>
+          <p className="mt-2 text-lg text-gray-600 sm:text-center">
+            Here’s what early Kleo users say after connecting their accounts.
+          </p>
+        </div>
         <ReviewGrid />
       </Container>
     </section>

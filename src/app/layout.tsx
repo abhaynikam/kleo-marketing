@@ -14,10 +14,10 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: {
     template: '%s - Kleo',
-    default: 'Kleo — Your complete money picture.',
+    default: 'Kleo — Every account. Every rupee. One clear picture.',
   },
   description:
-    'Kleo securely connects to your bank accounts and gives you one clear view of your complete financial picture — spending, net worth, and investments — all automatically, so you can make better money decisions.',
+    'Kleo connects to your banks, cards, and investments — then does the tracking for you. Auto-categorized spending, real-time net worth, and your whole portfolio in one glance. Free forever.',
 }
 
 export default function RootLayout({
