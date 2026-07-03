@@ -20,20 +20,14 @@ export function Logomark(props: React.ComponentPropsWithoutRef<'svg'>) {
         </linearGradient>
       </defs>
       <rect width="40" height="40" rx="11" fill={`url(#${id}-fill)`} />
-      {/* stylised "k" */}
-      <rect x="11" y="9.5" width="4.6" height="21" rx="2.3" fill="#fff" />
-      <path
-        d="M15.5 20.2 24.4 11.6"
-        stroke="#fff"
-        strokeWidth="4.4"
-        strokeLinecap="round"
-      />
-      <path
-        d="M15.5 20.2 25 30"
-        stroke="#fff"
-        strokeWidth="4.4"
-        strokeLinecap="round"
-      />
+      {/* radar mark */}
+      <g fill="none" stroke="#fff" strokeLinecap="round">
+        <path d="M28.21 16.14 A9.3 9.3 0 1 1 21.29 11.29" strokeWidth="2.2" />
+        <path d="M25.3 17.69 A6 6 0 1 1 20.83 14.56" strokeWidth="2.2" />
+        <path d="M22.83 18.99 A3.2 3.2 0 1 1 20.44 17.33" strokeWidth="1.9" />
+        <path d="M20 11.2 L20 20.5" strokeWidth="2.2" />
+      </g>
+      <circle cx="20" cy="20.5" r="1.9" fill="#fff" />
     </svg>
   )
 }
