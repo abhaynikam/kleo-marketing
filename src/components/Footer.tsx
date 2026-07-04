@@ -72,6 +72,9 @@ export function Footer() {
           </form>
           <div className="mt-6 flex flex-col items-center gap-4 md:mt-0 md:flex-row md:gap-6">
             <nav className="flex gap-6 text-sm text-gray-600">
+              <Link href="/support" className="hover:text-gray-900">
+                Support
+              </Link>
               <Link href="/terms" className="hover:text-gray-900">
                 Terms
               </Link>

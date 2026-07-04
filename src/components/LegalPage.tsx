@@ -16,13 +16,15 @@ import { Logo } from '@/components/Logo'
  */
 export function LegalPage({
   title,
+  eyebrow = 'Legal',
   lastUpdated,
   intro,
   children,
   embed = false,
 }: {
   title: string
-  lastUpdated: string
+  eyebrow?: string
+  lastUpdated?: string
   intro?: React.ReactNode
   children: React.ReactNode
   embed?: boolean
@@ -36,6 +38,9 @@ export function LegalPage({
               <Logo className="h-9 w-auto" />
             </Link>
             <nav className="flex gap-6 text-sm text-gray-600">
+              <Link href="/support" className="hover:text-gray-900">
+                Support
+              </Link>
               <Link href="/terms" className="hover:text-gray-900">
                 Terms
               </Link>
@@ -50,14 +55,16 @@ export function LegalPage({
       <main className="flex-auto py-14 sm:py-20">
         <Container className="max-w-3xl!">
           <p className="text-sm font-semibold tracking-wide text-cyan-600 uppercase">
-            Legal
+            {eyebrow}
           </p>
           <h1 className="mt-2 text-3xl font-semibold tracking-tight text-balance text-gray-900 sm:text-4xl">
             {title}
           </h1>
-          <p className="mt-3 text-sm text-gray-500">
-            Last updated: {lastUpdated}
-          </p>
+          {lastUpdated && (
+            <p className="mt-3 text-sm text-gray-500">
+              Last updated: {lastUpdated}
+            </p>
+          )}
 
           {intro && (
             <div className="mt-8 text-base/7 text-gray-700">{intro}</div>
@@ -96,6 +103,9 @@ export function LegalPage({
             <nav className="flex gap-6">
               <Link href="/" className="hover:text-gray-900">
                 Home
+              </Link>
+              <Link href="/support" className="hover:text-gray-900">
+                Support
               </Link>
               <Link href="/terms" className="hover:text-gray-900">
                 Terms of Service
