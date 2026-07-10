@@ -1,6 +1,9 @@
 import Link from 'next/link'
 import clsx from 'clsx'
 
+export const APP_STORE_URL =
+  'https://apps.apple.com/in/app/kleo-finance/id6787000765'
+
 export function AppStoreLink({
   color = 'black',
 }: {
@@ -8,7 +11,9 @@ export function AppStoreLink({
 }) {
   return (
     <Link
-      href="#"
+      href={APP_STORE_URL}
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label="Download on the App Store"
       className={clsx(
         'rounded-lg transition-colors',

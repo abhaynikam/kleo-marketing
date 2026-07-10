@@ -6,6 +6,7 @@ import { Container } from '@/components/Container'
 import { TextField } from '@/components/Fields'
 import { Logomark } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
+import { APP_STORE_URL } from '@/components/AppStoreLink'
 import qrCode from '@/images/qr-code.svg'
 
 function QrCodeBorder(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -44,7 +45,7 @@ export function Footer() {
             </div>
             <div className="ml-8 lg:w-64">
               <p className="text-base font-semibold text-gray-900">
-                <Link href="#">
+                <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
                   <span className="absolute inset-0 sm:rounded-2xl" />
                   Download the app
                 </Link>
